@@ -24,7 +24,7 @@
 module synfifo
   //parameters
   #(parameter depth = 8,
-    parameter data_width = 16)
+    parameter data_width = 32)
   ( // ports
 input clk,
 input rstn,
