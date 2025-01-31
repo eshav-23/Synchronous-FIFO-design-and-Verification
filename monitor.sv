@@ -36,12 +36,12 @@ class fifo_monitor extends uvm_monitor;
      fifo_seq_item trans;
      trans = fifo_seq_item ::type_id::create("trans");
       
-          trans.wr=`MON_IF.wr;
-          trans.data_in=`MON_IF.data_in;
+          trans.wr_en=`MON_IF.wr_en;
+          trans.data=`MON_IF.data;
           trans.full=`MON_IF.full;
          
-          trans.rd=`MON_IF.rd;
-          trans.data_out=`MON_IF.data_out;
+          trans.rd_en=`MON_IF.rd_en;
+          trans.data_o=`MON_IF.data_o;
           trans.empty=`MON_IF.empty;
         
           @(posedge vif.MONITOR.clk);
